@@ -8,7 +8,7 @@
   }
   
    :root {
-      --primary-pale-blue: hsl(225, 100%, 94%);
+      --primary-pale-blue: rgb(224, 232, 255);
       --primary-very-pale-blue: hsl(225, 100%, 98%);
       --desaturated-blue: hsl(224, 23%, 55%);
       --dark-blue: hsl(223, 47%, 23%);
@@ -35,7 +35,7 @@
   }
   
   .container div:first-child {
-      width: 350px;
+      width: 370px;
       background-color: var(--primary-very-pale-blue);
       border-radius: 15px;
       -webkit-border-radius: 15px;
@@ -45,9 +45,8 @@
   }
   
   .info,
-  .pricing,
   .payment {
-      padding: 0 10px;
+      padding: 0 30px;
   }
   
   .container,
@@ -87,17 +86,91 @@
   /* footer */
   
   .pricing {
-      margin: 2rem 1rem;
+      margin: 2rem 30px;
+      background-color: rgba(224, 232, 255, 0.3);
       display: flex;
       justify-content: space-between;
+      padding: 10px;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
   }
   
   .pricing div:first-child {
       display: flex;
+      align-items: center;
+      background: none;
+  }
+  
+  .pricing>a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: underline;
+      color: hsl(239.7, 74.5%, 46.1%);
+  }
+  
+  .pricing>a:hover {
+      text-decoration: none;
+      cursor: pointer;
+      color: #766CF1;
   }
   
   .pricing div:first-child div {
       padding-left: 10px;
+  }
+  
+  .pricing div:first-child div p:first-child {
+      color: var(--dark-blue);
+      font-weight: 600;
+  }
+  
+  .pricing div:first-child div p:last-child {
+      color: var(--desaturated-blue);
+  }
+  
+  .payment {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .payment button {
+      width: 100%;
+      border-radius: 15px;
+      -webkit-border-radius: 15px;
+      -moz-border-radius: 15px;
+      -ms-border-radius: 15px;
+      -o-border-radius: 15px;
+      background: hsl(239.7, 74.5%, 46.1%);
+      color: white;
+      padding: 0.8rem 0;
+      font-weight: 600;
+      border-color: hsl(239.7, 74.5%, 46.1%);
+      box-shadow: 0px 16px 28px -16px hsl(239.7, 74.5%, 46.1%);
+      margin-bottom: 2rem;
+      border: none;
+  }
+  
+  .payment button:hover {
+      background-color: #766CF1;
+      box-shadow: 0px 16px 28px -16px #766cf1;
+      cursor: pointer;
+      border: #766cf1;
+      border: none;
+  }
+  
+  .payment p {
+      color: var(--desaturated-blue);
+      margin-bottom: 2rem;
+      font-weight: 600;
+  }
+  
+  .payment p:hover {
+      color: var(--dark-blue);
+      cursor: pointer;
   }
   
   .attribution {
